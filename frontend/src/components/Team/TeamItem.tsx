@@ -10,7 +10,7 @@ interface TeamProps {
 {/**ffca2f
 fb726e
 fc9754 */}
-export default function TeamItem({url}:TeamProps ){
+export default function TeamItem({url,name,description}:TeamProps ){
     return(
     <Flex h="325px" w="240px" flexDir="column" justifyContent="center" /*pl="1rem" m="2rem"*/ borderRadius="10" m="1rem" bgImg={"images/gradiente4.svg"} >
         {/*<MdOutlineAppBlocking fontSize="70px" color="#272c70" />*/}
