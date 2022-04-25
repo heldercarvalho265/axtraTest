@@ -15,6 +15,7 @@ export default function Team(){
                 <TeamItem url="ana.png" name="Ana Monteiro" description="O vídeo é uma forma poderosa de provar o seu ponto de vista. Quando clica em Vídeo Online, pode colar o código incorporado para o vídeo que quer adicionar. Pode também escrever uma palavra-chave para procurar online o vídeo que melhor se adapta ao seu documento." />
                 <TeamItem url="ana.png" name="Ana Monteiro" description="O vídeo é uma forma poderosa de provar o seu ponto de vista. Quando clica em Vídeo Online, pode colar o código incorporado para o vídeo que quer adicionar. Pode também escrever uma palavra-chave para procurar online o vídeo que melhor se adapta ao seu documento." />
                 <TeamItem url="ana.png" name="Ana Monteiro" description="O vídeo é uma forma poderosa de provar o seu ponto de vista. Quando clica em Vídeo Online, pode colar o código incorporado para o vídeo que quer adicionar. Pode também escrever uma palavra-chave para procurar online o vídeo que melhor se adapta ao seu documento." />
+                <TeamItem url="ana.png" name="Ana Monteiro" description="O vídeo é uma forma poderosa de provar o seu ponto de vista. Quando clica em Vídeo Online, pode colar o código incorporado para o vídeo que quer adicionar. Pode também escrever uma palavra-chave para procurar online o vídeo que melhor se adapta ao seu documento." />
             
             </Flex>
         </Flex>
