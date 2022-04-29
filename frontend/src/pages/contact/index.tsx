@@ -6,9 +6,13 @@ import { Flex,Heading,Text,
     FormHelperText ,Input,Stack,Textarea,Button,Icon, Box} from "@chakra-ui/react";
 
     import { MdSend,MdLocalPhone,MdOutlineEmail,MdSupportAgent} from "react-icons/md";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 export default function Contact(){
     return (
+        <>
+        <Header/>
         <Flex minH="100vh" pt={["5vh","10vh"]} flexDir="column" align="center">
             <Flex
                 className='teste'
@@ -22,18 +26,18 @@ export default function Contact(){
                 <img src="images/Blur Gradient.svg"alt="" />
             </Flex>
             {/**Top */}
-            <Heading h="15vh" display = "flex" alignItems="center" justifyContent="center" fontSize="2xl" color="#272c70">
+            <Heading h={["10vh","5vh","8vh","10vh","10vh","15vh"]}  display = "flex" alignItems="center" justifyContent="center" fontSize={["24px","24px","36px","24px","24px","2xl"]} color="#272c70">
                ENTRE EM CONTATO CONOSCO
             </Heading>
 
             {/**Base */}
-            <Flex bg="#F0F2FE" borderRadius="10px" h="65vh" w="80vw">
+            <Flex bg="#F0F2FE" borderRadius="10px" minH="65vh" w="80vw" m="1rem" h={["100%",""]} flexDir={["column","column","column","row","row","row"]}>
                 {/**Base left */}
-                <Flex flexDir="column" w="40vw" pl="2rem" pt="2rem">
-                    <Text fontSize="xl" fontWeight="500" color="#272c70">
+                <Flex flexDir="column" w={["100%","100%","100%","40vw"]} p={["1rem","2rem"]} alignItems={["center","center","center","flex-start"]}>
+                    <Text fontSize={["md","xl"]} fontWeight="500" color="#272c70">
                         Envie uma mensagem!
                     </Text>
-                    <Text mt=".5rem" fontSize="md" fontWeight="400" color="#272c70">
+                    <Text mt=".5rem" fontSize={["sm","md"]} fontWeight="400" color="#272c70">
                         Retornaremos o mais breve possível.
                     </Text>
 
@@ -60,7 +64,7 @@ export default function Contact(){
                     
                 </Flex>
                 {/**Base right */}
-                <Flex flexDir="column" justifyContent="center" alignItems="flex-start" w="40vw" pl="8rem" pt="2rem">
+                <Flex flexDir="column" justifyContent="center" alignItems={["center","center","center","flex-start"]} pt="2rem" w={["100%","100%","100%","40vw"]}>
                     <Flex alignItems="center" mb="2rem">
                        <Box w="45px" h="45px" bg="#fc9754" borderRadius="50%" display="flex" alignItems="center" justifyContent="center">
                         <Icon
@@ -111,7 +115,8 @@ export default function Contact(){
             </Flex>
            
         </Flex>
+        <Footer/> 
 
-      
+      </>
     )
   }

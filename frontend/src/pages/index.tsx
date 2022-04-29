@@ -4,10 +4,13 @@ import Home1 from '../components/Home'
 import Service from '../components/Service'
 import Project from '../components/Project'
 import Team from '../components/Team'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
+
 const Home: NextPage = () => {
   return (
-    
+    <>
+    <Header/>
     
     <Flex flexDirection="column">
     
@@ -21,8 +24,10 @@ const Home: NextPage = () => {
           //alt='demo'
         />
       </AspectRatio> 
-      <Footer/>     
+          
     </Flex>
+    <Footer/> 
+    </>
   )
 }
 

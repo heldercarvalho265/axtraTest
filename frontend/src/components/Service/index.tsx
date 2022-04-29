@@ -1,5 +1,6 @@
 import { Flex , Heading, Text} from "@chakra-ui/react";
-import ServiceItem from './ServiceItem'
+import { ServiceItem } from "./ServiceItem";
+
 
 export default function Service(){
     return(
@@ -9,18 +10,22 @@ export default function Service(){
                 Nossos Serviços
             </Heading>
             <Text >
-                Axtra, empresa de informática que atende a um público mais exigente e busca QUALIDADE em seus serviços.
+                Astra, empresa de informática que atende a um público mais exigente e busca QUALIDADE em seus serviços.
             </Text>
         </Flex>
         
-        <Flex minH="40vh" w="94vw" borderRightRadius="50" bg="gray.50" flexDir="row" flexWrap="wrap" alignItems="center" justifyContent="space-around" flex="3" mb="2.5rem">
-            <ServiceItem icon="soft" name="Desenvolvimento DE SOFTWARE" description="aaaaaaaaaa aaaaaaaa sssssssss dddddddd ddddf ffffffffffff gggggg cccccccccc sssssssssss" />
-            <ServiceItem icon="soft" name="" description="" />
-            <ServiceItem icon="soft" name="" description="" />
-            <ServiceItem icon="soft" name="Desenvolvimento DE SOFTWARE" description="" />
-            <ServiceItem icon="soft" name="Desenvolvimento DE SOFTWARE" description="" />
-            <ServiceItem icon="soft" name="Desenvolvimento DE SOFTWARE" description="" />
+        <Flex minH="40vh" w="90vw" borderRightRadius="50" bg="gray.50"  alignItems="center" mb="2.5rem" justifyContent="flex-start" pl="5%">
+            <Flex flexWrap="wrap">
+                
+                <ServiceItem icon="data" name="Centro de Dados" description="Descrição" />
+                <ServiceItem icon="soft" name="Desenvolvimento DE SOFTWARE" description="" />
+                <ServiceItem icon="soft" name="Desenvolvimento DE SOFTWARE" description="" />
+                <ServiceItem icon="soft" name="Redes" description="" />
+
+            </Flex>
+            
         </Flex>
 
-    </Flex>)
+    </Flex>
+    )
 }

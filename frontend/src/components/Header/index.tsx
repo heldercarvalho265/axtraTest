@@ -9,11 +9,12 @@ import { useState } from 'react'
 export default function Header(){
     const [ display, setDisplay]= useState('none')
     return(
-        <Flex backgroundColor={"gray.50"} w="100%" as="header" h={["5vh","10vh"]} align="center" justify="center" zIndex="10" pl={["1rem","1rem","6rem"]} pr={["1rem","1rem","4rem"]} position="fixed">
+        <Flex backgroundColor={"gray.50"} w="100%" as="header" h={["3rem","5rem"]} align="center" justify="center" zIndex="10" pl={["1rem","1rem","6rem"]} pr={["1rem","1rem","4rem"]} position="fixed">
             {/* Left */}
             <NextLink href={"/"} passHref>
                 <Image
-                    w={["60px","120px"]}
+                //{["10vh","5vh","5vh","10vh","10vh","15vh"]}
+                    w={["80px","90px","100px","120px","120px","120px","120px"]}
                     objectFit='cover'
                     src='/images/logo_s.svg'
                     alt='Logo da empresa Axtra'
@@ -33,21 +34,21 @@ export default function Header(){
                 <Flex
                     
                 >
-                    <NextLink href="/" passHref  scroll>
-                        <ChakraLink display="flex" alignItems="center">
-                            <Text
-                                fontWeight="medium"
-                                as="a"
-                                variant={"ghost"}
-                                
-                                >
-                                    Inicio
-                            </Text>
-                        </ChakraLink>
+                        <NextLink href={"/"} passHref scroll>
+                            <Button
+                              ml="4"
+                              fontWeight="medium"
+                              as="a"
+                              variant={"ghost"}
+                              my={5}
+                              w="100%"
+                              
+                              >
+                                  Inicio
+                            </Button>
+                        </NextLink>
                         
-                    </NextLink>
-                        
-                        <NextLink href={"/#team"} passHref scroll>
+                        <NextLink href={"/#team"} passHref >
                             <Button
                               ml="4"
                               fontWeight="medium"
@@ -103,7 +104,7 @@ export default function Header(){
                 {/* Menu Horizontal Fim */}
                 <NextLink href="/contact" passHref >
                     <Button as="a" bgGradient='linear(to-l, #fb726e, #ffca2f)' size='sm' ml="5rem" color="white" fontWeight={"400"} leftIcon={<ArrowForwardIcon/>}>
-                            Contate Nos
+                            Contacte-nos
                     </Button>
                 </NextLink>
             </Flex>
@@ -116,12 +117,16 @@ export default function Header(){
 
                 {/* btn  Contate Nos e menu Vertical*/}
 
-                <Flex>
+                <Flex h="50px"
+                        w="50px"
+                        alignItems="center"
+                        >
                     
                     <IconButton
+                        
                         aria-label='Open Menu'
-                        size={"200"}
                         mr={2}
+                        fontSize="2rem"
                         icon={<HamburgerIcon/>}
                         display={['flex','flex','flex','none','none']}
                         bg="transparent"
@@ -160,66 +165,75 @@ export default function Header(){
                         h="100vh"
                     >
 
-                            <NextLink href={""} passHref>
-                                <Button
-                                fontWeight="medium"
-                                as="a"
-                                variant={"ghost"}
-                                my={2}
-                                w="100%"
-                                
-                                >
-                                    Inicio
-                                </Button>
-                            </NextLink>
-                            <NextLink href={""} passHref>
-                                <Button
-                                fontWeight="medium"
-                                as="a"
-                                variant={"ghost"}
-                                my={2}
-                                w="100%"
-                                
-                                >
-                                    Equipa
-                                </Button>
-                            </NextLink>
-                            <NextLink href={""} passHref>
-                                <Button
-                                fontWeight="medium"
-                                as="a"
-                                variant={"ghost"}
-                                my={2}
-                                w="100%"
-                                
-                                >
-                                    Projeto
-                                </Button>
-                            </NextLink>
-                            <NextLink href={""} passHref>
-                                <Button
-                                fontWeight="medium"
-                                as="a"
-                                variant={"ghost"}
-                                my={2}
-                                w="100%"
-                                
-                                >
-                                    Serviços
-                                </Button>
-                            </NextLink>
-                            <NextLink href={""} passHref>
-                                <Button
-                                fontWeight="medium"
-                                as="a"
-                                variant={"ghost"}
-                                my={2}
-                                w="100%"
-                                
-                                >
-                                    Sobre
-                                </Button>
-                            </NextLink>
+                <NextLink href={"/"} passHref scroll>
+                            <Button
+                              ml="4"
+                              fontWeight="medium"
+                              as="a"
+                              variant={"ghost"}
+                              my={5}
+                              w="100%"
+                              onClick={() => setDisplay('none') }
+                              
+                              >
+                                  Inicio
+                            </Button>
+                        </NextLink>
+                        
+                        <NextLink href={"/#team"} passHref scroll>
+                            <Button
+                              ml="4"
+                              fontWeight="medium"
+                              as="a"
+                              variant={"ghost"}
+                              my={5}
+                              w="100%"
+                              onClick={() => setDisplay('none') }
+                              >
+                                  Equipa
+                            </Button>
+                        </NextLink>
+                        <NextLink href={""} passHref>
+                            <Button
+                              ml="4"
+                              fontWeight="medium"
+                              as="a"
+                              variant={"ghost"}
+                              my={5}
+                              w="100%"
+                              onClick={() => setDisplay('none') }
+                              
+                              >
+                                  Projeto
+                            </Button>
+                        </NextLink>
+                        <NextLink href="/#service" passHref>
+                            <Button
+                              ml="4"
+                              fontWeight="medium"
+                              as="a"
+                              variant={"ghost"}
+                              my={5}
+                              w="100%"
+                              onClick={() => setDisplay('none') }
+                              
+                              >
+                                  Serviços
+                            </Button>
+                        </NextLink>
+                        <NextLink href={""} passHref>
+                            <Button
+                              ml="4"
+                              fontWeight="medium"
+                              as="a"
+                              variant={"ghost"}
+                              my={5}
+                              w="100%"
+                              onClick={() => setDisplay('none') }
+                              >
+                                  Sobre
+                            </Button>
+                        </NextLink>
                     </Flex>
                 </Flex>
                

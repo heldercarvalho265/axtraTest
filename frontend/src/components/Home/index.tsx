@@ -7,6 +7,8 @@ import { useState } from "react";
 import { MdPolicy } from "react-icons/md";
 import {ArrowForwardIcon} from '@chakra-ui/icons'
 
+import {useInViewport} from 'react-in-viewport';
+
 export default function Home(){
     const [animationState, setAnimationState] = useState({
         isStopped: false, isPaused: false
@@ -35,7 +37,7 @@ export default function Home(){
                   flexDirection="column"
                   align="center"
                   h={['40%','80%','80%', '80%','90%','100%']}
-                  w={['100%','100%','100%','40%']}
+                  w={['100%','100%','100%','100%','100%','40%']}
                   >
                     <Box
                       display={"flex"}
@@ -44,11 +46,11 @@ export default function Home(){
                       w="100%"
                       h="100%"
                       >
-                        <Heading fontSize={["20px","24px","28px","30px","42px","50px"] } fontWeight="500" pb={"0.8rem"}>
+                        <Heading fontSize={["20px","24px","28px","30px","35px","42px"] } fontWeight="500" pb={"0.8rem"}>
                             Olá, Seja bem-vindo!👋<br/>
                         </Heading>
-                        <Text fontWeight="400" pb={"0.8rem"} fontSize={["12px","14px","20px","20px","20px","24px"] } pr=".5rem">
-                            <Text as="span" fontWeight="400" > Axtra, </Text> empresa de informática que atende a um público mais exigente e busca QUALIDADE em seus serviços.
+                        <Text fontWeight="400" pb={"0.8rem"} fontSize={["12px","14px","15px","16px","18px","20px"] } pr=".5rem">
+                            <Text as="span" fontWeight="400" > Astra Solutions, </Text> empresa de informática que atende a um público mais exigente e busca QUALIDADE em seus serviços.
                         </Text>
                         <Flex mt="1rem">
                             <Button color='white' bg="#272c70" variant='outline' fontWeight={"400"} h={["30px","50px"]} fontSize={["12px","18px"]} w={["120px","180px"]}> 
