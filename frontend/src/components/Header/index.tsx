@@ -4,6 +4,7 @@ import NextLink from 'next/link'
 
 import {ArrowForwardIcon, CloseIcon, HamburgerIcon} from '@chakra-ui/icons'
 import { useState } from 'react'
+import { ColorModeSwitcher } from './ColorModeSwitcher.tsx'
 
 
 export default function Header(){
@@ -109,133 +110,8 @@ export default function Header(){
                 </NextLink>
             </Flex>
 
-                {
-                    /*ffca2f
-                    fb726e
-                    fc9754*/
-                }
 
-                {/* btn  Contate Nos e menu Vertical*/}
-
-                <Flex h="50px"
-                        w="50px"
-                        alignItems="center"
-                        >
-                    
-                    <IconButton
-                        
-                        aria-label='Open Menu'
-                        mr={2}
-                        fontSize="2rem"
-                        icon={<HamburgerIcon/>}
-                        display={['flex','flex','flex','none','none']}
-                        bg="transparent"
-                        onClick={() => setDisplay('flex') }
-                    />
-                </Flex>
-                
-                <Flex
-                    flexDir="column"
-                    w="100vw"
-                    bg="gray.50"
-                    pos="fixed"
-                    top="0"
-                    right="0"
-                    overflowY="auto"
-                    justifyContent="center"
-                    display={display}
-                    
-                >
-                    <Flex justify="flex-end" w="100%">
-                        
-                         <IconButton
-                            
-                            mt={2}
-                            mr={2}
-                            aria-label = "Close Menu"
-                            size="lg"
-                            icon={<CloseIcon/>}
-                            onClick={() => setDisplay('none') }
-                         /> 
-                    </Flex>
-                    
-                    <Flex
-                        flexDir="column"
-                        w="100vw"
-                        h="100vh"
-                    >
-
-                <NextLink href={"/"} passHref scroll>
-                            <Button
-                              ml="4"
-                              fontWeight="medium"
-                              as="a"
-                              variant={"ghost"}
-                              my={5}
-                              w="100%"
-                              onClick={() => setDisplay('none') }
-                              
-                              >
-                                  Inicio
-                            </Button>
-                        </NextLink>
-                        
-                        <NextLink href={"/#team"} passHref scroll>
-                            <Button
-                              ml="4"
-                              fontWeight="medium"
-                              as="a"
-                              variant={"ghost"}
-                              my={5}
-                              w="100%"
-                              onClick={() => setDisplay('none') }
-                              >
-                                  Equipa
-                            </Button>
-                        </NextLink>
-                        <NextLink href={""} passHref>
-                            <Button
-                              ml="4"
-                              fontWeight="medium"
-                              as="a"
-                              variant={"ghost"}
-                              my={5}
-                              w="100%"
-                              onClick={() => setDisplay('none') }
-                              
-                              >
-                                  Projeto
-                            </Button>
-                        </NextLink>
-                        <NextLink href="/#service" passHref>
-                            <Button
-                              ml="4"
-                              fontWeight="medium"
-                              as="a"
-                              variant={"ghost"}
-                              my={5}
-                              w="100%"
-                              onClick={() => setDisplay('none') }
-                              
-                              >
-                                  Serviços
-                            </Button>
-                        </NextLink>
-                        <NextLink href={""} passHref>
-                            <Button
-                              ml="4"
-                              fontWeight="medium"
-                              as="a"
-                              variant={"ghost"}
-                              my={5}
-                              w="100%"
-                              onClick={() => setDisplay('none') }
-                              >
-                                  Sobre
-                            </Button>
-                        </NextLink>
-                    </Flex>
-                </Flex>
+            <ColorModeSwitcher/>
                
                 
             

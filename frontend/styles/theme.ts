@@ -1,8 +1,12 @@
 // 1. Import `extendTheme`
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme , type ThemeConfig} from "@chakra-ui/react"
 
+const config: ThemeConfig = {
+  initialColorMode: 'light',
+  useSystemColorMode: false,
+}
 // 2. Call `extendTheme` and pass your custom values
-export const theme = extendTheme({
+const theme = extendTheme({
     fonts:{
       heading: 'Poppins',
       body: 'Poppins'
@@ -14,9 +18,13 @@ export const theme = extendTheme({
                 color:"black.700"
             }
         }
-    }
+    },
+    config
     
 })
+
+export default theme
+
 /*
 // 3. Pass the new theme to `ChakraProvider`
 <ChakraProvider theme={theme}>
